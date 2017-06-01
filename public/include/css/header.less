@@ -1,0 +1,312 @@
+
+@small-delta: ~"(max-width: 749px)";
+@large-delta: ~"(min-width: 750px)";
+
+// @background: #C10303; // red
+@background: #FFE600; // yellow
+// @foreground: #FFF;
+@foreground: #C10303; // red
+
+
+
+/*following is header.css styles*/
+
+header {
+  position: relative;
+  background: @background;
+  color: @foreground;
+}
+
+#top-bar {
+  background: @background;
+  border-bottom: 1px solid @foreground;
+}
+
+#banner {
+  border-bottom: 1px solid @foreground;
+}
+
+#upload-link {
+  text-decoration: none;
+  padding: 3px 10px;
+  border: 1px solid @foreground;
+  border-radius: 4px;
+  color: @foreground;
+}
+
+#upload-link.active,
+#upload-link:hover {
+  background: @foreground;
+  color: @background;
+}
+
+#team-emblem {
+  display: inline-block;
+  position: relative;
+}
+
+#mascot {
+  /*display: none;*/
+  /*height: 150px;*/
+}
+
+#slogan {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  bottom: 18px;
+  text-align: center;
+  color: @foreground;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#slogan {
+  display: inline-block;
+  position: absolute;
+  width: 100%
+  bottom: 20px;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#main-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#main-menu ul li a {
+  text-decoration: none;
+  color: @foreground;
+}
+
+#main-menu ul li a.active,
+#main-menu ul li a:hover {
+  background: @foreground;
+  color: @background;
+}
+
+
+/*** SMALL SCREEN VIEW ***/
+
+@media @small-delta {
+  
+  #top-bar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    height: 35px;
+    width: 100%;
+  }
+  
+  #upload-link {
+    position: fixed;
+    top: 4px;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, 0);
+  }
+  
+  #team-emblem {
+    display: none;
+  }
+  
+  #burger-icon {
+    display: block;
+    position: fixed;
+    top: 6px;
+    right: 7px;
+    z-index: 100;
+    width: 30px;
+    height: 25px;
+    padding: 2px;
+  }
+  
+  #burger-icon hr {
+    margin: 0 0 5px;
+    height: 3px;
+    border-radius: 20px;
+    background: @foreground;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  #menu-toggle ~ #main-menu {
+    display: none;
+  }
+  
+  #menu-toggle:checked ~ #main-menu {
+    display: block;
+    position: fixed;
+    top: 35px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: @background;
+    border-bottom: 1px solid @background;
+  }
+  
+  #menu-toggle:checked ~ #main-menu a {
+    padding-left: 30px;
+  }
+  
+  #menu-toggle:checked ~ #banner {
+    display: none;
+  }
+    
+  #banner {
+    margin-top: 35px;
+  }
+
+  #main-menu ul li a {
+    display: block;
+    padding: 14px;
+  }
+  
+}
+
+/*** LARGE SCREEN VIEW ***/
+
+@media @large-delta {
+  
+  #top-bar,
+  #burger-icon,
+  #menu-toggle {
+    display: none;
+  }
+  
+  #upload-link {
+    position: absolute;
+    top: 50%;
+    right: 64px;
+    z-index: 100;
+    transform: translate(0, -100%);
+  }
+  
+  #main-menu ul:first-child {
+    margin-left: 30px;
+  }
+  
+  #main-menu ul li {
+    display: inline;
+  }
+  
+  #main-menu ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+  }
+  
+}
+
+
+
+/*** SMALL SCREEN VIEW ***/
+
+@media @small-delta {
+  
+  #banner {
+    height: 100px;
+    background: @background;
+  }
+  
+  #team-name {
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+    height: 50px;
+    width: 180px;
+    color: @foreground;
+  }
+  
+  #word-team {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+  }
+  
+  #word-gish {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  #word-2017 {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    font-size: 16px;
+  }
+  
+}
+
+
+/*** LARGE SCREEN VIEW ***/
+
+@media @large-delta {
+  
+  #banner {
+    position: relative;
+    
+    /*background: url(we-can-do-it-alt.jpg) repeat-x top fixed;*/
+    /*background-size: 200px;*/
+  }
+
+  #team-name {
+    text-decoration: none;
+    display: inline-block;
+    
+    
+    position: relative;
+    margin: 20px 54px 0;
+    
+    
+    position: absolute;
+    top: 45%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    height: 62px;
+    width: 270px;
+    color: @foreground;
+  }
+  
+  #word-team {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+  }
+  
+  #word-gish {
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  #word-2017 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 16px;
+  }
+  
+}
+
+
+

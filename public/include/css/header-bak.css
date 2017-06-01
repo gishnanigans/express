@@ -1,0 +1,290 @@
+
+
+
+/*@background: #C10303;*/
+/*@foreground: #FFF;*/
+/*@transition: 750px;*/
+
+/*@yellow: #FFE600;*/
+
+
+/*following is header.css styles*/
+
+header {
+  position: relative;
+  background: #C10303;
+  color: #FFF;
+}
+
+#top-bar {
+  background: #C10303;
+  border-bottom: 1px solid #FFF;
+}
+
+#upload-link {
+  text-decoration: none;
+  padding: 3px 10px;
+  border: 1px solid #FFF;
+  border-radius: 4px;
+  color: #FFF;
+}
+
+#upload-link:hover {
+  background: #FFF;
+  color: #C10303;
+}
+
+#team-emblem {
+  display: inline-block;
+  position: relative;
+}
+
+#mascot {
+  /*display: none;*/
+  /*height: 150px;*/
+}
+
+#slogan {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, 0);
+  color: #FFF;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#main-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#main-menu ul li a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+#main-menu ul li a:hover {
+  background: #FFF;
+  color: #C10303;
+}
+
+
+/*** SMALL SCREEN VIEW ***/
+
+@media (max-width: 749px) {
+  
+  #top-bar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    height: 35px;
+    width: 100%;
+  }
+  
+  #upload-link {
+    position: fixed;
+    top: 4px;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, 0);
+  }
+  
+  #burger-icon {
+    display: block;
+    position: fixed;
+    top: 6px;
+    right: 7px;
+    z-index: 100;
+    width: 30px;
+    height: 25px;
+    padding: 2px;
+  }
+  
+  #burger-icon hr {
+    margin: 0 0 5px;
+    height: 3px;
+    border-radius: 20px;
+    background: #FFF;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  #menu-toggle ~ #main-menu {
+    display: none;
+  }
+  
+  #menu-toggle:checked ~ #main-menu {
+    display: block;
+    position: fixed;
+    top: 35px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #C10303;
+    border-bottom: 1px solid #C10303;
+  }
+  
+  #menu-toggle:checked ~ #main-menu a {
+    padding-left: 30px;
+  }
+  
+  #menu-toggle:checked ~ #banner {
+    display: none;
+  }
+    
+  #banner {
+    margin-top: 35px;
+  }
+
+  #main-menu ul li a {
+    display: block;
+    padding: 14px;
+  }
+  
+}
+
+/*** LARGE SCREEN VIEW ***/
+
+@media (min-width: 750px) {
+  
+  #top-bar,
+  #burger-icon,
+  #menu-toggle {
+    display: none;
+  }
+  
+  #upload-link {
+    position: absolute;
+    top: 50%;
+    right: 64px;
+    z-index: 100;
+    transform: translate(0, -50%);
+  }
+  
+  #main-menu ul:first-child {
+    margin-left: 30px;
+  }
+  
+  #main-menu ul li {
+    display: inline;
+  }
+  
+  #main-menu ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+  }
+  
+}
+
+
+
+/*** SMALL SCREEN VIEW ***/
+
+@media (max-width: 749px) {
+  
+  #banner {
+    height: 100px;
+    background: #C10303;
+  }
+  
+  #team-name {
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+    height: 50px;
+    width: 180px;
+    color: #FFF;
+  }
+  
+  #word-team {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+  }
+  
+  #word-gish {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  #word-2017 {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    font-size: 16px;
+  }
+  
+}
+
+
+/*** LARGE SCREEN VIEW ***/
+
+@media (min-width: 750px) {
+  
+  #banner {
+    position: relative;
+    /*height: 75px;*/
+    
+    /*background: url(we-can-do-it-alt.jpg) repeat-x top fixed;*/
+    /*background-size: 200px;*/
+  }
+
+  #team-name {
+    text-decoration: none;
+    display: inline-block;
+    
+    
+    position: relative;
+    margin: 20px 54px 0;
+    
+    
+    position: absolute;
+    top: 45%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    height: 62px;
+    width: 270px;
+    color: #FFF;
+  }
+  
+  #word-team {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+  }
+  
+  #word-gish {
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  #word-2017 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 16px;
+  }
+  
+}
+
+
+
